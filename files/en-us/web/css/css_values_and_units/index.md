@@ -131,13 +131,13 @@ CSS uses dimensions to specify:
 
 These are all covered in subsections below.
 
-#### Distance units
+## Distance units
 
 Where a distance unit, also known as a length, is allowed as a value for a property, this is described as the {{cssxref("&lt;length&gt;")}} type. There are two types of lengths in CSS: relative and absolute. Relative length units specify a length in relation to something else.
 
 There are two types of relative lengths: font-relative lengths and viewport-percentage lengths. These both come in two types. Font-relative length units are either local font-relative or root font-relative. Viewport percentage lengths are either relative to the viewport height or width size or, as defined in the [CSS Containment module](/en-US/docs/Web/CSS/CSS_containment), relative to a [container](/en-US/docs/Web/CSS/CSS_container_queries#container_query_length_units).
 
-##### Font-relative lengths
+### Font-relative lengths
 
 Local font-relative lengths are relative to the "local" font size or line height, specifying a length in relation to a computed size of a feature of the [element](/en-US/docs/Web/HTML/Element) itself, or relative to the element's inherited value in the case of a circular reference, such as the `em` value for a {{cssxref("font-size")}} property or a `lh` value for a {{cssxref("line-height")}} property.
 For example, `em` is relative to the font size on the element and `ex` is relative to the x-height of the element's font.
@@ -154,7 +154,7 @@ For example, `em` is relative to the font size on the element and `ex` is relati
 Root font-relative lengths specify a length in relation to the element's {{CSSxRef(":root", "root element")}} ancestor, such as {{HTMLElement("HTML")}} or {{SVGElement("SVG")}}.
 For example, `rem` is relative to the font size on the root element and `rex` is the x-height of the root element's font.
 
-##### Viewport and container relative units
+##### Viewport units
 
 Viewport unit lengths specify a length relative to the dimensions of the [viewport](/en-US/docs/Glossary/Viewport).
 For example, `vw` is relative to the width of the viewport and `vh` is relative to the height of the viewport.
@@ -174,6 +174,8 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 | `vmin` | 1% of viewport's smaller dimension.                                                                                                |
 | `vw`   | 1% of viewport's width.                                                                                                            |
 
+#### Container units
+
 Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_container_queries).
 For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
 
@@ -185,6 +187,8 @@ For example, `cqw` is relative to the width of the query container and `cqh` is 
 | `cqmax` | The larger value of `cqi` or `cqb`    |
 | `cqmin` | The smaller value of `cqi` or `cqb`   |
 | `cqw`   | 1% of a query container's width       |
+
+### Absolute length units
 
 Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
 
@@ -249,7 +253,7 @@ Resolution units are represented by the type {{cssxref("&lt;resolution&gt;")}}. 
 | `dpi`       | Dots per inch.       |
 | `dppx`, `x` | Dots per px unit.    |
 
-### Percentages
+#### Percentages
 
 A {{cssxref("&lt;percentage&gt;")}} is a type that represents a fraction of some other value.
 
