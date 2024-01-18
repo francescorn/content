@@ -174,6 +174,8 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 | `vmin` | 1% of viewport's smaller dimension.                                                                                                |
 | `vw`   | 1% of viewport's width.                                                                                                            |
 
+##### Container relative units
+
 Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_container_queries).
 For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
 
@@ -185,6 +187,8 @@ For example, `cqw` is relative to the width of the query container and `cqh` is 
 | `cqmax` | The larger value of `cqi` or `cqb`    |
 | `cqmin` | The smaller value of `cqi` or `cqb`   |
 | `cqw`   | 1% of a query container's width       |
+
+##### Absolute length units
 
 Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
 
