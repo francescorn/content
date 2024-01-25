@@ -29,25 +29,25 @@ The relative length units listed here are based on font and viewport.
 
 Font lengths define the `<length>` value in terms of the size of a particular character or font attribute in the font currently in effect in an element or its parent.
 
-> **Note:** These units, especially `em` and `rem`, are often used to create scalable layouts, which maintain the vertical rhythm of the page even when the user changes the font size.
-
-- `cap`
-  - : Represents the "cap height" (nominal height of capital letters) of the element's {{Cssxref("font")}}.
-- `ch`
-  - : Represents the width or more precisely the {{Glossary("advance measure")}} of the glyph `0` (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.
-    In cases where it is impossible or impractical to determine the measure of the `0` glyph, it must be assumed to be `0.5em` wide by `1em` tall.
-- `em`
-  - : Represents the calculated {{Cssxref("font-size")}} of the element. If used on the {{Cssxref("font-size")}} property itself, it represents the _inherited_ font-size of the element.
-- `ex`
-  - : Represents the [x-height](https://en.wikipedia.org/wiki/X-height) of the element's {{Cssxref("font")}}. In fonts with the `x` letter, this is generally the height of lowercase letters in the font; `1ex ≈ 0.5em` in many fonts.
+ @@ -43,13 +43,23 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 - `ic`
   - : Equal to the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.
 - `lh`
-  - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length.
+  - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length. The size of actual lines boxes may differ based on their content as the unit enables length calculations based on the theoretical size of an ideal empty line.
+
+### Relative length units based on font root
+- `rcap`
+  - : Equal to the "cap height" (nominal height of capital letters) of the root element's {{Cssxref("font")}}.
+- `rch`
+  - : Equal to the width or the {{Glossary("advance measure")}} of the glyph `0` (zero, the Unicode character U+0030) in the root element's {{Cssxref("font")}}.
 - `rem`
   - : Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value (a common browser default is `16px`, but user-defined preferences may modify this).
+-  `rex`
+  - : Represents the x-height of the root element's {{Cssxref("font")}}.
+-  `ric`
+  - : Equal to the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found of the root element used to render it.
 - `rlh`
-  - : Equal to the computed value of the {{Cssxref("line-height")}} property on the root element (typically {{HTMLElement("html")}}), converted to an absolute length. When used on the {{Cssxref("font-size")}} or {{Cssxref("line-height")}} properties of the root element, it refers to the properties' initial value.
+  - : Equal to the computed value of the {{Cssxref("line-height")}} property on the root element (typically {{HTMLElement("html")}}), converted to an absolute length. When used on the {{Cssxref("font-size")}} or {{Cssxref("line-height")}} properties of the root element, it refers to the properties' initial value. The size of actual lines boxes may differ based on their content as the unit enables length calculations based on the theoretical size of an ideal empty line.
 
 ### Relative length units based on viewport
 
